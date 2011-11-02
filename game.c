@@ -235,38 +235,37 @@ char msg(int type,const char far *_text,int blink,int wait)
 		if(blink!=0)
 		{	setcolor(YELLOW);	//Draws\Clears Message Block
 			for(i=0;i<18;i++)
-		{	line(0,maxy-i,maxx,maxy-i);
+			{	line(0,maxy-i,maxx,maxy-i);
 				delay(3);
 			}
 
 		}
 
 		if(type==0)
-			{	sound(100);
-				delay(200);
-				sound(300);
-				delay(50);
-				sound(150);
-			}
+		{	sound(100);
+			delay(200);
+			sound(300);
+			delay(50);
+			sound(150);
+		}
 		else if(type==1)
-			{	sound(100);
-				delay(250);
-				sound(150);
-			}
-			delay(125);
+		{	sound(100);
+			delay(250);
+			sound(150);
+		}
+
+		delay(125);
 
 		if(type==0)						//Writes Text
-			{	sound(650);
-				setcolor(LIGHTRED);
-			}
+		{	sound(650);
+			setcolor(LIGHTRED);
+		}
 		else if (type==1)
-			{	//sound(850);
-				setcolor(BLUE);
-			}
+		{	//sound(850);
+			setcolor(BLUE);
+		}
 
-
-		if(blink!=0)
-			outtextxy(5,maxy-10,_text);
+		if(blink!=0) outtextxy(5,maxy-10,_text);
 
 		delay(400);
 
@@ -281,14 +280,15 @@ char msg(int type,const char far *_text,int blink,int wait)
 			{	sound(i*100);
 				delay(180-(i*10));
 			}
-				sound(1050);
-				delay(200);
-					sound(800);
-					delay(750);
-						sound(250);
-						delay(100);
-							sound(500);
-							delay(300);
+
+			sound(1050);
+			delay(200);
+			sound(800);
+			delay(750);
+			sound(250);
+			delay(100);
+			sound(500);
+			delay(300);
 		}
 
 		nosound();
@@ -330,7 +330,6 @@ int initscr()
 			setcolor(BLACK);
 
 		rectangle(i,i,maxx-i,maxy-i);
-
 	}
 
 	setcolor(YELLOW);
@@ -475,34 +474,34 @@ void gamescreen()
 	bar(0,0,maxx,maxy);
 
 	setcolor(BLUE);
-    for(i=0;i<16;i++)
+	for(i=0;i<16;i++)
 	{  	line(0,i,maxx,i);
-    	delay(10);
-    }
+		delay(10);
+	}
 
 	settextstyle(11,0,18);
 	setcolor(WHITE);
-    outtextxy(10,4,"CHOCOSTICKS :: CVS GAME STUDIOS");
+	outtextxy(10,4,"CHOCOSTICKS :: CVS GAME STUDIOS");
 
 	msg(1,"Loading Chocosticks...",1,0);
 
   	setfillstyle(1,CYAN);		//Draws prompt area
 	bar(0,160,maxx,375);
 
-    setfillstyle(1,GREEN);
-    bar(0,375,maxx,maxy-19);
+	setfillstyle(1,GREEN);
+	bar(0,375,maxx,maxy-19);
 
 	setcolor(LIGHTMAGENTA);
 	setlinestyle(0,0,3);
 
 	rectangle(0,266,maxx,271);
-    rectangle(1,160,maxx-1,375);
+	rectangle(1,160,maxx-1,375);
 
 	line(120,160,120,375);
 	line(0,375,maxx,375);
 
 	setcolor(MAGENTA);
-    line(0,maxy-21,maxx,maxy-21);
+	line(0,maxy-21,maxx,maxy-21);
 	line(maxx-1,377,maxx-1,maxy-21);
 	line(1,377,1,maxy-21);
 
@@ -510,22 +509,23 @@ void gamescreen()
 	settextstyle(4,0,3);
 	setcolor(RED);
 	outtextxy(40,195,"YOU");
-    outtextxy(15,305,"Computer");
+	outtextxy(15,305,"Computer");
 
 	settextstyle(0,0,1);
 	setfillstyle(1,LIGHTGRAY);	//Draws Tray
-    bar(40,30,600,140);
-    setcolor(LIGHTCYAN);
-    rectangle(40,30,600,140);
 
-    setfillstyle(1,BROWN);		//Draws Chocosticks
-    for(i=1;i<=21;i++)
-    {
+	bar(40,30,600,140);
+	setcolor(LIGHTCYAN);
+	rectangle(40,30,600,140);
+
+	setfillstyle(1,BROWN);		//Draws Chocosticks
+	for(i=1;i<=21;i++)
+	{
 		bar(37+(i*25),50,50+(i*25),110);
-        setcolor(RED);
-	outtextxy(37+(i*25),120,itoa(i,&str,10));
+        	setcolor(RED);
+		outtextxy(37+(i*25),120,itoa(i,&str,10));
 		sound(700+(i*10));
-        delay(200-i*9);
+        	delay(200-i*9);
 		nosound();
 	}
 
@@ -533,101 +533,98 @@ void gamescreen()
 
 void toss()    ////TOSS
 {
-    setcolor(WHITE);
+	setcolor(WHITE);
 	outtextxy(5,385,"{TOSS}: Enter Your Choice (H)eads OR (T)ails :");
-    setfillstyle(1,DARKGRAY);
-    bar(360,383,370,394);
+	setfillstyle(1,DARKGRAY);
+	bar(360,383,370,394);
 
-    fflush(stdin);
+	fflush(stdin);
 
 	do
-    {
+	{
 		x=getch();
 	}while(x!='h' && x!='H'&& x!='t' && x!='T');
 
-    setcolor(WHITE);
+	setcolor(WHITE);
 
 	if(x=='h' || x=='H')
 		outtextxy(362,385,"H");
-    else
-    	outtextxy(362,385,"T");
+	else
+		outtextxy(362,385,"T");
 
 	outtextxy(5,400,"Coin Tossed :");
 
-    for (i=1;i<36;i++)
-    {
+	for (i=1;i<36;i++)
+	{
 		setfillstyle(1,GREEN);
-    	bar(100,400,110,410);
+		bar(100,400,110,410);
 
-        setcolor(YELLOW);
+		setcolor(YELLOW);
 
-	    if(i%4==0)
+		if(i%4==0)
 			outtextxy(100,400,"\\");
 		else if(i%4==1)
 			outtextxy(100,400,"|");
-        else if(i%4==2)
-        	outtextxy(100,400,"/");
+	        else if(i%4==2)
+	        	outtextxy(100,400,"/");
 		else
-        	outtextxy(100,400,"-");
-        delay(40);
-    }
+        		outtextxy(100,400,"-");
+
+	        delay(40);
+	}
 
 	setcolor(WHITE);
+	randomize();
+	i=random(100)%2;
+	line(113,403,130,403);
 
-    randomize();
-    i=random(100)%2;
-
-    line(113,403,130,403);
-    if(i==0)
+	if(i==0)
 		outtextxy(110,400,"<  It's TAILS");
 	else
-       	outtextxy(110,400,"<  It's HEADS");
+		outtextxy(110,400,"<  It's HEADS");
 
 	if( ((x=='t'||x=='T')&&i==0) || ((x=='h'||x=='H') &&i==1) )
+	{
+		msg(1,"Player Won the TOSS",1,0);
+		outtextxy(5,420,"YOU won the TOSS.Play (1)st OR (2)nd :");
+		setfillstyle(1,DARKGRAY);
+		bar(313,418,323,429);
+
+		fflush(stdin);
+		do
 		{
-			msg(1,"Player Won the TOSS",1,0);
-	    	outtextxy(5,420,"YOU won the TOSS.Play (1)st OR (2)nd :");
-
-            setfillstyle(1,DARKGRAY);
-		    bar(313,418,323,429);
-
-            fflush(stdin);
-
-            do
-		    {
-				x=getch();
+			x=getch();
     		}while(x!='1' && x!='2');
 
-            setcolor(WHITE);
+		setcolor(WHITE);
 
-			if(x=='1')
-				{
-					outtextxy(315,420,"1");
-					turn=1;
-				}
-		    else
-    			{
-					outtextxy(315,420,"2");
-                    turn=0;
+		if(x=='1')
+		{
+			outtextxy(315,420,"1");
+			turn=1;
+		}
+		else
+    		{
+			outtextxy(315,420,"2");
+			turn=0;
                 }
 
         }
 	else
         {
-			outtextxy(5,420,"YOU lost the TOSS.");
-			msg(0,"Computer Won the TOSS",1,0);
-
-		    i=random(10)%2;
-		   	if(i==0)
-        		{
-					outtextxy(150,420,"Computer chose to play First !!");
-                    turn=0;
-				}
-			else
-				{
-					outtextxy(150,420,"Computer chose to play Second !!");
-                    turn=1;
-				}
+		outtextxy(5,420,"YOU lost the TOSS.");
+		msg(0,"Computer Won the TOSS",1,0);
+		i=random(10)%2;
+		if(i==0)
+        	{
+			outtextxy(150,420,"Computer chose to play First !!");
+			turn=0;
+		}
+		else
+		{
+			outtextxy(150,420,"Computer chose to play Second !!");
+			turn=1;
+		}
         }
 }
 
@@ -644,26 +641,24 @@ void pickstick(int who)
 		setfillstyle(1,BROWN);
 		bar(130+(csticks*25),290,143+(csticks*25),350);
 		csticks++;
-    }
-    else
+	}
+	else
 	{
-    	setfillstyle(1,LIGHTGRAY);
-        bar(37+(sticks*25),50,50+(sticks*25),110);
+    		setfillstyle(1,LIGHTGRAY);
+	        bar(37+(sticks*25),50,50+(sticks*25),110);
 
-        setfillstyle(1,BROWN);
-        bar(130+(psticks*25),180,143+(psticks*25),240);
+        	setfillstyle(1,BROWN);
+	        bar(130+(psticks*25),180,143+(psticks*25),240);
 		psticks++;
-    }
+	}
 
-    sticks--;
+	sticks--;
 
-    delay(100);
-    sound(900);
+	delay(100);
+	sound(900);
 	delay(40);
 	nosound();
-
 	delay(500);
-
 }
 
 //************************************************//
@@ -680,153 +675,152 @@ void main()
 	do	//for option Play Again ??
 	{
 
-	splash:
-	switch(initscr())
-	{
-		case 0:
-			//START GAME
-			gamescreen();
-			break;
-		case 1:
-			//HINTS
-
-			goto splash;
-			break;
-		case 2:
-			//about Us
-			goto splash;
-			break;
-		case 3:
-			exit(0);
-	}
-
-	msg(1,"21 Chocosticks loaded on the Tray",2,0);
-
-	toss();
-
-
-	while(sticks>1)
-	{
-		if(turn)	//Player Move
+		splash:
+		switch(initscr())
 		{
-		msg(1,"It is Players turn",1,0);
+			case 0:
+				//START GAME
+				gamescreen();
+				break;
+			case 1:
+				//HINTS
 
-			outtextxy(5,445,"Enter No. of sticks to pick :");
+				goto splash;
+				break;
+			case 2:
+				//about Us
+				goto splash;
+				break;
+			case 3:
+				exit(0);
+		}
 
-			setfillstyle(1,DARKGRAY);
-			bar(240,444,250,454);
+		msg(1,"21 Chocosticks loaded on the Tray",2,0);
 
-			fflush(stdin);
-			do
-			{
-				x=getch();
-			}while(x!='1' && x!='2' && x!='3' && x!='4');
-
-			setcolor(WHITE);
-
-			if(x=='1')
-			outtextxy(242,446,"1");
-			else if(x=='2')
-			outtextxy(242,446,"2");
-			else if(x=='3')
-			outtextxy(242,446,"3");
-			else
-			outtextxy(242,446,"4");
+		toss();
 
 
-			for(i=30;i<atoi(&x);i=i+100)
-			{
-				if(sticks==0)
-				{	msg(1,"Chocosticks Finished !!",1,1);
-					break;
-				}
-				else
+		while(sticks>1)
+		{
+			if(turn)	//Player Move
+			{	msg(1,"It is Players turn",1,0);
+
+				outtextxy(5,445,"Enter No. of sticks to pick :");
+
+				setfillstyle(1,DARKGRAY);
+				bar(240,444,250,454);
+
+				fflush(stdin);
+				do
 				{
-					delay(350);
-					pickstick(PLAYER);
+					x=getch();
+				}while(x!='1' && x!='2' && x!='3' && x!='4');
+
+				setcolor(WHITE);
+
+				if(x=='1')
+					outtextxy(242,446,"1");
+				else if(x=='2')
+					outtextxy(242,446,"2");
+				else if(x=='3')
+					outtextxy(242,446,"3");
+				else
+					outtextxy(242,446,"4");
+
+
+				for(i=30;i<atoi(&x);i=i+100)
+				{
+					if(sticks==0)
+					{
+						msg(1,"Chocosticks Finished !!",1,1);
+						break;
+					}
+					else
+					{
+						delay(350);
+						pickstick(PLAYER);
+					}
 				}
+
+				turn=!turn;
+
 			}
 
-			turn=!turn;
+			else        //Computer move
+
+			{
+				msg(1,"Computer to pick Chocosticks",1,0);
+				i=0;
+
+				for(j=1;j<5;j++)
+				{
+					if((sticks-j)%5==1)
+					goto LOGICAL;
+				}
+
+				randomize();
+				j=1+random(4);
+
+				for(i=1;i<=j;i++)
+				{
+					delay(400);
+					pickstick(COMP);
+				}
+
+				i=5;
+				turn=!turn;
+				continue;
+
+				LOGICAL:
+				while(sticks%5!=1 && sticks>1 && i<4)
+				{
+					delay(600);
+					pickstick(COMP);
+					i++;
+				}
+
+				turn=!turn;
+			}
+
 
 		}
 
-		else        //Computer move
+		if((turn && sticks==1) || (!turn && sticks==0))
+			msg(0,"YOU Lost !! Better Luck next time",3,1);
+		else
+			msg(2,"Congratulations !! YOU WIN",1,1);
 
+		cleardevice();
+		setcolor(WHITE);
+		outtextxy(180,235,"Play Again ?? (Y/N):");
+
+		fflush(stdin);
+
+		do
 		{
-			msg(1,"Computer to pick Chocosticks",1,0);
-			i=0;
+		    	while(!kbhit())
+	    		{
+			   	setfillstyle(1,BLACK);
+				bar(335,233,340,243);
+				delay(75);
 
-			for(j=1;j<5;j++)
-			{
-				if((sticks-j)%5==1)
-				goto LOGICAL;
-			}
+				setfillstyle(1,LIGHTGREEN);
+				bar(335,233,340,243);
+				delay(350);
 
-			randomize();
-			j=1+random(4);
+				setfillstyle(1,GREEN);
+				bar(335,233,340,243);
+		    		delay(150);
+		    	}
 
-			for(i=1;i<=j;i++)
-			{
-				delay(400);
-				pickstick(COMP);
-			}
+			x=getche();
 
-			i=5;
-			turn=!turn;
-			continue;
+		}while(x!='y' && x!='Y' && x!='N' && x!='n');
 
-			LOGICAL:
-			while(sticks%5!=1 && sticks>1 && i<4)
-			{
-				delay(600);
-				pickstick(COMP);
-				i++;
-			}
+		sticks=21;
+		psticks=0;
+		csticks=0;
 
-			turn=!turn;
-		}
-
-
-	}
-
-	if((turn && sticks==1) || (!turn && sticks==0))
-		msg(0,"YOU Lost !! Better Luck next time",3,1);
-	else
-		msg(2,"Congratulations !! YOU WIN",1,1);
-
-	cleardevice();
-	setcolor(WHITE);
-	outtextxy(180,235,"Play Again ?? (Y/N):");
-
-	fflush(stdin);
-
-    do
-	{
-    	while(!kbhit())
-    	{
-		   	setfillstyle(1,BLACK);
-			bar(335,233,340,243);
-	    delay(75);
-
-		setfillstyle(1,LIGHTGREEN);
-			bar(335,233,340,243);
-	    delay(350);
-
-		setfillstyle(1,GREEN);
-			bar(335,233,340,243);
-	    delay(150);
-	    }
-
-		x=getche();
-
-    }while(x!='y' && x!='Y' && x!='N' && x!='n');
-
-	sticks=21;
-	psticks=0;
-	csticks=0;
-
-}while(x=='Y' || x=='y');
+	}while(x=='Y' || x=='y');
 
 }
-
