@@ -643,7 +643,7 @@ void pickstick(int who)
 
 void main()
 {
-	initgraph(&gd,&gm,"d:\\tc\\bgi");
+	initgraph(&gd,&gm,"bgi");
 
 	maxx=getmaxx();
 	maxy=getmaxy();
