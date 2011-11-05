@@ -1,6 +1,11 @@
-// CHOCOSTICKS Simulator
-// AUTHOR	: Chinmay V S
-// DATE		: 02-DEC-2007
+/*********************************************
+* CHOCOSTICKS Simulator
+*
+* AUTHOR	: Chinmay V S <cvs268@gmail.com>
+*
+* VERSION	: 0.1
+*********************************************/
+
 
 #define PLAYER 0
 #define COMP 1
