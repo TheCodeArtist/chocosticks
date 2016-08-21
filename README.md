@@ -2,14 +2,14 @@
 
 [![chocosticks demo video](http://img.youtube.com/vi/kZNl0KTdMFM/0.jpg)](https://www.youtube.com/watch?feature=player_embedded&v=kZNl0KTdMFM)
 
-- Start by downloading the stand-alone executable **[choco.zip](http://chocosticks.googlecode.com/files/choco.zip)** 
-- **[Running chocosticks](http://code.google.com/p/chocosticks/wiki/running_chocosticks)** contains complete instructions to get you started. 
-- Got a question? Check out the **[chocosticks-wiki](http://code.google.com/p/chocosticks/w/list)**. 
+- Start by downloading the stand-alone executable **[choco.zip](https://github.com/TheCodeArtist/chocosticks/raw/master/Misc/choco.zip?raw=true)** 
+- **[Running chocosticks](https://github.com/TheCodeArtist/chocosticks/blob/master/Documentation/running-chocosticks.md)** contains complete instructions to get you started. 
+- Got a question? Check out the **[chocosticks Documentation](https://github.com/TheCodeArtist/chocosticks/tree/master/Documentation)**. 
 - **[Report an issue](https://github.com/TheCodeArtist/chocosticks/issues)** with chocosticks. 
 
 # Introduction
 
-**Chocosticks** is a hobby project of mine that took 2 days to write during the 2nd semester of my Bachelor's Degree in 2005. It started out as a simple scanf-printf program and i kept adding other features. [*Continue Reading >>>*](http://code.google.com/p/chocosticks/wiki/Background)
+**Chocosticks** is a hobby project of mine that took 2 days to write during the 2nd semester of my Bachelor's Degree in 2005. It started out as a simple scanf-printf program and i kept adding other features. [*Continue Reading >>>*](https://github.com/TheCodeArtist/chocosticks/blob/master/Documentation/background.md)
 
 ## Primary Concepts
 
@@ -26,7 +26,7 @@ All this stuff can be found **"in"** the chocosticks code.
 Things that one will learn while trying to build and run chocosticks.
 
 - Project management using git: Accessing/Modifying chocosticks code.
-- Running legacy-DOS apps in dosbox - [Running **chocosticks** in Dosbox on Windows](http://code.google.com/p/chocosticks/wiki/running_chocosticks#3._Running_chocosticks_in_Dosbox_emulator_on_windows).
+- Running legacy-DOS apps in dosbox - [Running **chocosticks** in Dosbox on Windows](https://github.com/TheCodeArtist/chocosticks/blob/master/Documentation/running-chocosticks.md#3-running-chocosticks-in-dosbox-emulator-on-windows).
 
 # What Next?
 
