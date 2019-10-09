@@ -1,6 +1,6 @@
 # chocosticks
 
-[![chocosticks demo video](http://img.youtube.com/vi/kZNl0KTdMFM/0.jpg)](https://www.youtube.com/watch?feature=player_embedded&v=kZNl0KTdMFM)
+[![chocosticks demo video](http://i3.ytimg.com/vi/kZNl0KTdMFM/hqdefault.jpg)](https://www.youtube.com/watch?feature=player_embedded&v=kZNl0KTdMFM)
 
 - Start by downloading the stand-alone executable **[choco.zip](https://github.com/TheCodeArtist/chocosticks/raw/master/Misc/choco.zip?raw=true)** 
 - **[Running chocosticks](https://github.com/TheCodeArtist/chocosticks/blob/master/Documentation/running-chocosticks.md)** contains complete instructions to get you started. 
