@@ -34,7 +34,7 @@ Things that one will learn while trying to build and run chocosticks.
 - Fixing a TODO from the bunch of those littered across the code.
 
 ## Porting chocosticks to Linux
-- Making chocosticks compile using gcc.
+- Making chocosticks compile using gcc compiler.
 
 
 # Additional References
