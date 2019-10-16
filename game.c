@@ -534,7 +534,8 @@ void toss()    ////TOSS
 	setfillstyle(1,DARKGRAY);
 	bar(360,383,370,394);
 
-	fflush(stdin);
+	while(kbhit())
+		getch();
 
 	do {
 		x=getch();
@@ -583,7 +584,8 @@ void toss()    ////TOSS
 		setfillstyle(1,DARKGRAY);
 		bar(313,418,323,429);
 
-		fflush(stdin);
+		while(kbhit())
+			getch();
 		do {
 			x=getch();
     		}while(x!='1' && x!='2');
@@ -691,7 +693,8 @@ void main()
 				setfillstyle(1,DARKGRAY);
 				bar(240,444,250,454);
 
-				fflush(stdin);
+				while(kbhit())
+					getch();
 				do {
 					x=getch();
 				}while(x!='1' && x!='2' && x!='3' && x!='4');
