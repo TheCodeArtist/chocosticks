@@ -679,7 +679,7 @@ void main()
 			exit(0);
 		}
 
-		msg(1,"21 Chocosticks loaded on the Tray",2,0);
+		msg(1,"twenty one Chocosticks loaded on the Tray",2,0);
 
 		toss();
 
@@ -688,7 +688,7 @@ void main()
 			if(turn) {	//Player Move
 				msg(1,"It is Players turn",1,0);
 
-				outtextxy(5,445,"Enter No. of sticks to pick :");
+				outtextxy(5,445,"Enter Number of sticks to pick :");
 
 				setfillstyle(1,DARKGRAY);
 				bar(240,444,250,454);
@@ -760,7 +760,7 @@ void main()
 		if((turn && sticks==1) || (!turn && sticks==0))
 			msg(0,"YOU Lost !! Better Luck next time",3,1);
 		else
-			msg(2,"Congratulations !! YOU WIN",1,1);
+			msg(2,"Congratulations !! YOU WON",1,1);
 
 		cleardevice();
 		setcolor(WHITE);
